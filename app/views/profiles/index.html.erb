@@ -1,4 +1,8 @@
-<h2>Employees</h2>
-<% ProfileDecorator.decorate_collection(@profiles).each do |profile| %>
-  <%= render 'profiles/profile', profile: profile %>
-<% end %>
+<section class="profiles">
+  <div id="full-time" class="profile-group">
+  <h2>Full Time</h2><%= link_to '+ Add New', new_profile_path, class: 'new-profile' %>
+  <% ProfileDecorator.decorate_collection(@profiles).each do |profile| %>
+    <%= render 'profiles/profile', profile: profile %>
+  <% end %>
+</div>
+</section>
