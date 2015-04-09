@@ -85,7 +85,6 @@ class ProfilesController < ApplicationController
 
   def find_profile
     Profile.
-      includes(assigned_onboarding_items: { onboarding_item: :assignable }).
       includes(:user).
       find(params[:id])
   end
