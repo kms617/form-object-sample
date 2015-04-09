@@ -3,7 +3,9 @@ require 'rails_helper'
 feature 'Admin enrolls an employee' do
   context 'valid submissions' do
     scenario 'Admin enters required information' do
-      profile = build_stubbed(:profile)
+      hire_type = create(:hire_type)
+      team = create(:team)
+      profile = build_stubbed(:profile, hire_type: hire_type, team: team)
 
       visit new_profile_path
 

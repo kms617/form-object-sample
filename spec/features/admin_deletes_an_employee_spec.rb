@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'Admin deletes a user' do
+feature 'Admin deletes an employee' do
   it 'deletes a user and their profile' do
     profile = create(:profile)
     profile_count = Profile.count

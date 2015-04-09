@@ -1,4 +1,4 @@
-describe ProfilesController, focus: true do
+describe ProfilesController do
 
   describe 'POST #create' do
     it 'renders the new enrollment template' do
