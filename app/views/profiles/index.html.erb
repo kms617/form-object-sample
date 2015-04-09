@@ -1,25 +1,4 @@
-<section class="profiles">
-  <div id="apprentices" class="profile-group">
-    <h2>Apprentices</h2><%= link_to '+ Add New', new_profile_path, class: 'new-profile' %>
-    <%= onboarding_progress_header %>
-    <% ProfileDecorator.decorate_collection(@profiles.apprentices).each do |profile| %>
-      <%= render 'profiles/profile', profile: profile %>
-    <% end %>
-  </div>
-
-  <div id="new-hires" class="profile-group">
-  <h2>New Hires</h2><%= link_to '+ Add New', new_profile_path, class: 'new-profile' %>
-    <%= onboarding_progress_header %>
-    <% ProfileDecorator.decorate_collection(@profiles.new_hires).each do |profile| %>
-      <%= render 'profiles/profile', profile: profile %>
-    <% end %>
-  </div>
-
-  <div id="full-time" class="profile-group">
-    <h2>Full Time</h2>
-    <%= onboarding_progress_header %>
-    <% ProfileDecorator.decorate_collection(@profiles.full_time).each do |profile| %>
-      <%= render 'profiles/profile', profile: profile %>
-    <% end %>
-  </div>
-</section>
+<h2>Employees</h2>
+<% ProfileDecorator.decorate_collection(@profiles).each do |profile| %>
+  <%= render 'profiles/profile', profile: profile %>
+<% end %>

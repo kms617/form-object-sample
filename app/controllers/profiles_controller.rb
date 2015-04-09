@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
   def index
-    @profiles = ProfileQuery.new
+    @profiles = Profile.ordered
   end
 
   def new

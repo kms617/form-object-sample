@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'Admin enrolls an employee' do
+feature 'Admin enrolls an employee', focus: true do
   context 'valid submissions' do
     scenario 'Admin enters required information' do
       hire_type = create(:hire_type)
