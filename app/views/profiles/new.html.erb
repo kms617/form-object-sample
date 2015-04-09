@@ -1,0 +1,29 @@
+<%= render 'form_errors.html.erb', object: @enrollment  %>
+
+<div class='profile-name'>
+  <%= image_tag(@enrollment.photo) %><h3 class='employee-name'><span class="js-employee-name"><%= @enrollment.name %></span></h3>
+</div>
+<hr>
+<%= simple_form_for @enrollment, url: profiles_path do |form| %>
+  <%= form.input :email, error: false %>
+  <%= form.input :first_name, error: false %>
+  <%= form.input :last_name, label: false, error: false %>
+  <%= form.input :hire_type_id do %>
+    <%= form.select :hire_type_id, hire_types_for_select %>
+  <% end %>
+  <%= form.input :team_id do %>
+    <%= form.select :team_id, teams_for_select %>
+  <% end %>
+  <%= form.input :title %>
+  <%= form.input :bio do %>
+    <%= form.text_area :bio, id: 'bio' %>
+    <p class="js-char-count"></p>
+  <% end %>
+  <%= form.input :manager_id do %>
+    <%= form.select :manager_id, full_time_employees_for_select, include_blank: 'None' %>
+  <% end %>
+  <%= form.input :mentor_id do %>
+    <%= form.select :mentor_id, full_time_employees_for_select, include_blank: 'None' %>
+  <% end %>
+  <%= form.button :submit, 'Save' %>
+<% end %>

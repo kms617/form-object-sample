@@ -1,0 +1,36 @@
+<%= render 'form_errors.html.erb', object: @enrollment %>
+<div class='profile-page'>
+  <div class='profile-name'>
+    <%= image_tag(@profile.photo_url(:medium)) %><h3 class='employee-name'><%= @enrollment.name %></h3>
+  </div>
+  <hr>
+  <div class='profile-wrapper'>
+    <%= simple_form_for @enrollment, url: profile_path(@profile), method: :patch do |form| %>
+      <%= form.input :reset_photo, as: :boolean, label: 'Reset Profile Photo' %>
+      <%= form.input :email, error: false %>
+      <%= form.input :first_name, error: false %>
+      <%= form.input :last_name, label: false, error: false %>
+      <%= form.input :slack_handle %>
+      <%= form.input :communication_style %>
+      <%= form.input :hire_type_id do %>
+        <%= form.select :hire_type_id, hire_types_for_select %>
+      <% end %>
+      <%= form.input :team_id do %>
+        <%= form.select :team_id, teams_for_select %>
+      <% end %>
+      <%= form.input :title %>
+      <%= form.input :bio do %>
+        <%= form.text_area :bio, id: 'bio' %>
+        <p class="js-char-count"></p>
+      <% end %>
+      <%= form.input :manager_id do %>
+        <%= form.select :manager_id, full_time_employees_for_select, include_blank: 'None' %>
+      <% end %>
+      <%= form.input :mentor_id do %>
+        <%= form.select :mentor_id, full_time_employees_for_select, include_blank: 'None' %>
+      <% end %>
+      <%= form.button :submit, 'Save' %>
+      <%= link_to_delete_profile(@profile) %>
+    <% end %>
+  </div>
+</div>

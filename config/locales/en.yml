@@ -1,0 +1,38 @@
+en:
+  date:
+    formats:
+      default:
+        "%m/%d/%Y"
+      with_weekday:
+        "%a %m/%d/%y"
+
+  flashes:
+    profiles:
+      create:
+        success: You have successfully created an employee.
+        failure: There was a problem creating this employee. Please try again.
+      update:
+        success: You have successfully updated an employee.
+        failure: There was a problem updating this employee. Please try again.
+      destroy:
+        success: You have successfully deleted an employee.
+        failure: There was a problem deleting this employee. Please try again.
+
+  helpers:
+    confirmation:
+      delete: Are you sure you want to delete this?
+    defaults:
+      profile:
+        bio: My 140 character bio describing myself goes here. I can enter details about my personality, likes, & dislikes to help people get to know me.
+
+  time:
+    formats:
+      default:
+        "%a, %b %-d, %Y at %r"
+      date:
+        "%b %-d, %Y"
+      short:
+        "%B %d"
+
+  titles:
+    application: Onboarding-server

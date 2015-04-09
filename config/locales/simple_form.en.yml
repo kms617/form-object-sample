@@ -1,0 +1,25 @@
+en:
+  simple_form:
+    "yes": 'Yes'
+    "no": 'No'
+    required:
+      text: 'required'
+      mark: '*'
+    error_notification:
+      default_message: "Please review the problems below:"
+    labels:
+      enrollment_form:
+        bio: 'Bio'
+        email: 'Email'
+        first_name: 'Name'
+        hire_type: 'Hire Type'
+        manager_id: 'Manager'
+        team: 'Team'
+        title: 'Title'
+    placeholders:
+      enrollment_form:
+        email: 'user@intrepid.io'
+        first_name: 'First'
+        last_name: 'Last'
+        team: 'Select Team'
+        title: 'Apprentice, Junior Developer, Senior Designer, etc.'

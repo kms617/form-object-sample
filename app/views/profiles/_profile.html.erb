@@ -1,0 +1,5 @@
+<%= link_to edit_profile_path(profile), class: 'profile' do %>
+  <%= image_tag(profile.photo_url(:small)) %>
+  <span><%= profile.first_name %> <%= profile.last_name %></span>
+  <%= onboarding_progress(profile) %>
+<% end %>

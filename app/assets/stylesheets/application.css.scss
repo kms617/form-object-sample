@@ -1,0 +1,46 @@
+@import 'bourbon';
+@import 'base/variables';
+@import 'refills/flashes';
+
+$blue: rgba(#00A3DA, 0.82);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, main {
+  height: 100%;
+}
+
+body.home {
+  background: transparent asset-url('home.jpg') no-repeat;
+  background-size: cover;
+  font-family: 'proxima-nova';
+  font-weight: bold;
+
+  div#flash {
+    margin: 1em;
+  }
+
+  main {
+    display: flex;
+  }
+
+  a.sign-in {
+    @include transition(background-color 0.3s ease);
+
+    align-self: center;
+    background-color: $blue;
+    color: white;
+    display: block;
+    font-size: 24px;
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    text-decoration: none;
+
+    &:hover {
+      background-color: rgba($blue, 1);
+    }
+  }
+}

@@ -1,0 +1,7 @@
+first_name,last_name,slack_handle,email,title,team,hire_type,visa
+Mark,Kasdorf,mark,mk@company.com,CEO,Management,Full Time,no_visa
+Matt,Bridges,matt,mb@company.com,CTO,Management,Full Time,no_visa
+Andrea,Garvey,andrea,ag@company.com,Director of Talent,Management,Full Time,no_visa
+Great,Designer,great,gd@company.com,Designer,Design,Full Time,visa
+Joe,Dev,joedev,jd@company.com,iOS Developer,iOS,Full Time,no_visa
+Kristin,Smith,kristin,ks@company.com,Backend Apprentice,Backend,Apprentice,no_visa
