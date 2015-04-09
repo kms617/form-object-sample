@@ -5,14 +5,17 @@
   <meta name="ROBOTS" content="NOODP" />
   <meta name="viewport" content="initial-scale=1" />
   <title><%= title %></title>
-  <%= stylesheet_link_tag :application, media: "all" %>
+  <%= stylesheet_link_tag :authenticated, media: "all" %>
   <%= csrf_meta_tags %>
 </head>
-<body class="home">
-  <%= render 'flashes' -%>
-  <main>
-    <%= yield %>
-    <%= render 'javascript' -%>
-  </main>
+<body class="<%= body_class %>">
+  <div class="content">
+    <%= render 'sidebar' -%>
+    <main>
+      <%= render 'flashes' -%>
+      <%= yield %>
+    </main>
+  </div>
+  <%= render 'javascript' -%>
 </body>
 </html>

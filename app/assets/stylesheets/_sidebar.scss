@@ -1,0 +1,45 @@
+nav.sidebar {
+  background-color: $light-gray;
+  border-right: 1px solid $medium-gray;
+
+  img {
+    padding: $base-spacing;
+    color: black;
+  }
+
+  a {
+    color: $dark-gray;
+    display: block;
+    font-weight: bold;
+    line-height: 2;
+    padding: 0 $base-spacing;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: white;
+    }
+
+    &.selected {
+      background-color: $dark-gray;
+      border-bottom-color: $dark-gray;
+      color: white;
+    }
+  }
+
+  a.main-section {
+    &:before {
+      @include position(relative, 0 0.5em 0 0);
+      @include triangle(10px, $dark-gray, right);
+      content: '';
+      display: inline-block;
+      vertical-align: baseline;
+    }
+  }
+
+  ul.sub-nav {
+    a {
+      font-weight: normal;
+      padding: 0 $base-spacing 0 golden-ratio($base-spacing, 1);
+    }
+  }
+}
