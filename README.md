@@ -9,7 +9,7 @@ For my work on the project, I worked on the migrations pertinent to the User, Pr
 My teammates were primarily responsible for the base styling and sidebar in the app.  The wireframes were created by designers on the team.  The Profile index, which I've pared down to bare bones here, was the work of one of my colleagues.  For this code sample, I have also removed all features required authentication.
 
 ## To Do
-- [ ] fix bug with photo not displaying
+- [ ] fix bug with rake tasks
 
 ## Getting Started
 
