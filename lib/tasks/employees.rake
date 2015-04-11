@@ -11,7 +11,6 @@ namespace :data do
                 headers: true,
                 header_converters: :symbol).each do |employee|
         profile = Employee.create(employee)
-        # bar.increment
       end
     end
 
