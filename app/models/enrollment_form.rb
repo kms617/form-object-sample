@@ -74,7 +74,7 @@ class EnrollmentForm
   end
 
   def default_photo
-    'assets/images/medium/missing.png'
+    'medium/missing.png'
   end
 
   def email_is_unique(user_id = nil)

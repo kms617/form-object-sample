@@ -10,7 +10,7 @@ class Profile < ActiveRecord::Base
                                       medium: ['74x74#', :png],
                                       small: ['48x48#', :png]
                                     },
-                            default_url: '/assets/images/:style/missing.png'
+                            default_url: ':style/missing.png'
 
   validates :bio, length: { maximum: 140 }
   validates_presence_of :first_name
